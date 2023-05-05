@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculation portal</title>
+    <link th:href="@{/index-stylesheet.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h2> Calculation portal </h2>
+    <form method="post" th:action="@{/calculate}">
+        <input type="text" name="a" placeholder="Value A:">
+        <input type="text" name="b" placeholder="Value B:">
+        <input type="text" name="c" placeholder="Value C:">
+        <input type="text" name="d" placeholder="Value D:">
+        <br><br>
+        <div class="radio">
+        <input type="radio" name="example" value="example1" checked><br>
+        <input type="radio" name="example" value="example2"><br>
+        <input type="radio" name="example" value="example3"><br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <table id="table">
+        <tr>
+            <td th:if="${result != null}" th:text ="${result}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
