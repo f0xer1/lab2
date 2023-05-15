@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link th:href="@{/index-stylesheet.css}" rel="stylesheet">
+</head>
+<body>
+<div class="topnav">
+    <a th:href="@{/}">Calculation portal</a>
+</div>
+<div class="container">
+<table id="table">
+    <h2>Result</h2>
+  <tr>
+    <td th:if="${result != null}" th:text ="${result}"></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
